@@ -5,7 +5,35 @@ import heroBcg from '../assets/hero-bcg.jpeg'
 import heroBcg2 from '../assets/hero-bcg-2.jpeg'
 
 const Hero = () => {
-  return <h4>hero</h4>
+  return <Wrapper className='section-center'>
+        <article className='content'>
+              <h1>
+                design your <br/>
+                comfort zone
+              </h1>
+              <p>
+              We are all about reliability, 
+              we want you to be able to trust our products, 
+              trust that they will last and withstand all kind 
+              of environments. That is why we take great pride 
+              in our development and testing of each and every 
+              product in our product collection. We are a fast
+               growing startup company because we always put the 
+               customer first. A customer-centered shopping experience
+                has always been our goal and we pride ourselves in our 
+                ability to not only offer you thoroughly tested products 
+                but also a professional and personal customer service.
+Shop with us today and experience the difference on your next adventure.
+              </p>
+              <Link to='/products' className='btn hero-btn'>
+                 shop now
+              </Link>
+        </article>
+        <article className='img-container'>
+          <img src={heroBcg} alt="nice table" className='main-img' />
+          <img src={heroBcg2} alt="person working" className='accent-img' />
+        </article>
+  </Wrapper>
 }
 
 const Wrapper = styled.section`
