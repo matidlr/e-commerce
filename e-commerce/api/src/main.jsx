@@ -11,4 +11,9 @@ import { UserProvider } from './context/user_context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(<App />);
+root.render(
+<ProductsProvider>
+<App />
+
+</ProductsProvider>
+);
