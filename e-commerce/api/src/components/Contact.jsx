@@ -14,11 +14,15 @@ const Contact = () => {
            eius illo! Placeat inventore unde quod 
            quisquam illum!
         </p>
-        <form className='contact-form'>
+        <form className='contact-form' 
+            action="https://formspree.io/f/mnqegrbq"
+            method="POST"
+            >
           <input 
             type='email'
             className='form-input'
-            placeholder='enter email'/>
+            placeholder='enter email'
+            name='email'/>
             <button type='submit' className='submit-btn'>
                subscribe
             </button>
