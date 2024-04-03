@@ -47,7 +47,7 @@ export const ProductsProvider = ({ children }) => {
     
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     fetchProducts(url)
   }, [])
   
