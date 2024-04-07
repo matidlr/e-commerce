@@ -67,8 +67,7 @@ const cart_reducer = (state, action) => {
     return { ...state, cart: [] }
   }
   if (action.type === COUNT_CART_TOTALS) {
-    const { total_items, total_amount } = state.cart.reduce(
-      (total, cartItem) => {
+    const { total_items, total_amount } = state.cart.reduce((total, cartItem) => {
         const { amount, price } = cartItem
         total.total_items += amount
         total.total_amount += price * amount
