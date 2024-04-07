@@ -26,8 +26,17 @@ const addToCart = (id, color, amount, product) => {
   amount, product }})
 }
 
+// remove item
+const removeItem = (id) => {
+
+}
+// toggle amount
+const toggleAmount = (id, value) {}
+// clear cart
+const clearCart = () =>{}
+
   return (
-    <CartContext.Provider value={{ ...state }}>{children}</CartContext.Provider>
+    <CartContext.Provider value={{ ...state, removeItem, toggleAmount, clearCart }}>{children}</CartContext.Provider>
   )
 }
 // make sure use
