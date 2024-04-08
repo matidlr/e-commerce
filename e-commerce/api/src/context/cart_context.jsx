@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useReducer } from 'react'
+import React, { useEffect, useContext, useReducer, createContext } from 'react'
 import reducer from '../reducers/cart_reducer'
 import {
   ADD_TO_CART,
@@ -50,12 +50,12 @@ const clearCart = () =>{
 }
 
 useEffect(()=>{
-  dispatch({ type: COUNT_CART_TOTALS })
   localStorage.setItem('cart', JSON.stringify(state.cart))
+  dispatch({ type: COUNT_CART_TOTALS })
 },[state.cart])
 
   return (
-    <CartContext.Provider value={{ ...state, removeItem, toggleAmount, clearCart }}>{children}</CartContext.Provider>
+    <CartContext.Provider value={{ ...state, addToCart, removeItem, toggleAmount, clearCart }}>{children}</CartContext.Provider>
   )
 }
 // make sure use

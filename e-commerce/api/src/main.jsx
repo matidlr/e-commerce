@@ -15,18 +15,20 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <Auth0Provider
-  domain={dev-6nn0jpj28fnynxns.us.auth0.com}
-  clientId={vfpeFtWh8GRGWWlR7gl4ybT2OTp4Jh5R}
+  domain='dev-6nn0jpj28fnynxns.us.auth0.com'
+  clientId='vfpeFtWh8GRGWWlR7gl4ybT2OTp4Jh5R'
   authorizationParams={{
     redirect_uri: `${window.location.origin}/cart`,
   }}
   >
-<ProductsProvider>
-  <FilterProvider>
-    <CartProvider>
-    <App />
-    </CartProvider>
-  </FilterProvider>
-</ProductsProvider>
+<UserProvider>
+    <ProductsProvider>
+      <FilterProvider>
+        <CartProvider>
+        <App />
+        </CartProvider>
+      </FilterProvider>
+    </ProductsProvider>
+</UserProvider>
 </Auth0Provider>
 );

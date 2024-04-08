@@ -21,8 +21,6 @@ function App() {
                        <Checkout/>
                   </PrivateRoute>
                 }/>
-          
-           <Route path='/private' element={<Private/>}/>
         </Routes>
         <Footer />
     </BrowserRouter>
