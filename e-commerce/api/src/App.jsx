@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Navbar, Sidebar, Footer } from './components';
-import { Home, Products, SingleProduct, About, Cart, Error, Checkout, Private } from './pages'
-import PrivateRoute from './pages/PrivateRoute';
+import { Home, Products, SingleProduct, About, Cart, Error, Checkout, PrivateRoute, AuthWrapper } from './pages'
 
 function App() {
   return (
+    <AuthWrapper>
     <BrowserRouter>
     <Navbar/>
     <Sidebar/>
@@ -26,6 +26,7 @@ function App() {
         </Routes>
         <Footer />
     </BrowserRouter>
+    </AuthWrapper>
   ) 
 }
 
