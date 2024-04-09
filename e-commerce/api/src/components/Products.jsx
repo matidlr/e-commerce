@@ -4,7 +4,7 @@ import { formatPrice } from '../utils/helpers'
 import { FaSearch } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
-const Product = ({ image, name, price, id }) => {
+const Products = ({ image, name, price, id }) => {
   return <Wrapper>
       <div className="container">
          <img src={image} alt={name} />
@@ -74,4 +74,4 @@ const Wrapper = styled.article`
     letter-spacing: var(--spacing);
   }
 `
-export default Product
+export default Products;
